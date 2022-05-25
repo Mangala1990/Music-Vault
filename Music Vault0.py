@@ -11,7 +11,7 @@ from pygame import mixer
 root = tk.ThemedTk()
 root.get_themes()                 
 root.set_theme("plastik")
-statusbar = ttk.Label(root, text="Welcome to Music Vault", justify='center', relief=FLAT, anchor=CENTER, background='violet', font='Times 12 bold')
+statusbar = ttk.Label(root, text="Welcome to Music Vault", justify='center', relief=FLAT, anchor=CENTER, background='violet', font='Times 14 bold')
 statusbar.pack(side=TOP, fill=Y)
 #Create the menubar
 menubar = Menu(root)
@@ -97,10 +97,8 @@ rightframe = Frame(root)
 rightframe.pack(pady=30)
 topframe = Frame(rightframe)
 topframe.pack()
-lengthlabel = ttk.Label(topframe, text='Total Length : --:--')
+lengthlabel = ttk.Label(topframe, text='Total Length : --:--', font='Times 14')
 lengthlabel.pack(pady=5)
-currenttimelabel = ttk.Label(topframe, text='Current Time : --:--', relief=GROOVE)
-currenttimelabel.pack()
 
 def show_details(play_song):
     file_data = os.path.splitext(play_song)
